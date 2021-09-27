@@ -1,4 +1,5 @@
 /*
+/!*
 //(age >= 18) ? console.log('ечли правда') : console.log('если ложь')
 //switch case
 
@@ -59,17 +60,17 @@ do {
 /!*for (let i = 0; i <= 5; i++) {
     console.log('foring');
 }*!/
-*/
+*!/
 
-/*let a = 2;
+/!*let a = 2;
 let b = 3;
 if (a = b) {
-    console.log('ложь');*/
+    console.log('ложь');*!/
 
 
 }
 
-/*var step;
+/!*var step;
 for (step = 0; step < 5; step++) {
  // Запускается 5 раз, с шагом от 0 до 4.
  console.log('Идём 1 шаг на восток');
@@ -80,7 +81,7 @@ for (step = 0; step < 5; step++) {
 let b = 3;
 let c = (i + b)
 
- console.log('c');*/
+ console.log('c');*!/
 
 const kurs = 'ready';
 if (kurs === 'ready') {
@@ -89,5 +90,22 @@ if (kurs === 'ready') {
  console.log('курс не готов пока')
 }
 
-let a = 25;
 
+
+alert("Hello, World!");
+
+("Hello, World!")
+
+
+
+ */
+
+
+// console.log("Hello, World!");
+
+const kurs = 'pending';
+if (kurs === 'ready') {
+    console.log('курс готов')
+} else if(kurs === 'pending') {
+    console.log('курс не готов пока')
+}
