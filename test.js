@@ -69,11 +69,25 @@ if (a = b) {
 
 }
 
-var step;
+/*var step;
 for (step = 0; step < 5; step++) {
  // Запускается 5 раз, с шагом от 0 до 4.
  console.log('Идём 1 шаг на восток');
 }
 
 
- 
+ let i = 5;
+let b = 3;
+let c = (i + b)
+
+ console.log('c');*/
+
+const kurs = 'ready';
+if (kurs === 'ready') {
+ console.log('курс готов')
+} else if(kurs === 'pending') {
+ console.log('курс не готов пока')
+}
+
+let a = 25;
+
