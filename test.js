@@ -103,9 +103,43 @@ alert("Hello, World!");
 
 // console.log("Hello, World!");
 
-const kurs = 'pending';
-if (kurs === 'ready') {
-    console.log('курс готов')
-} else if(kurs === 'pending') {
-    console.log('курс не готов пока')
+// const kurs = 'pending';
+// if (kurs === 'ready') {
+//     console.log('курс готов')
+// } else if(kurs === 'pending') {
+//     console.log('курс не готов пока')
+// }
+
+
+//Exercise1
+// let browser = ('Opera');
+// if (browser === 'Edge') {
+//     console.log("You've got the edge");
+// } else if (browser === 'Chrome') {
+//     console.log("Okay we support these browser too");
+// } else if (browser === 'Opera') {
+//     console.log("Okay we support these browser too");
+// } else if (browser === 'Safari') {
+//     console.log("Okay we support these browser too");
+// } else if (browser === 'Firefox') {
+//     console.log("Okay we support these browser too");
+// }
+
+
+//Exercise2
+
+const number = +prompt('Введите число между 0 и 3','');
+switch (number) {
+    case 0:
+        console.log('Вы ввели число 0');
+        break;
+    case 1:
+        console.log('Вы ввели число 1');
+        break;
+    case 2 || 3
+        console.log('Вы ввели число 2, а может и 3');
+        break;
+    default:
+        console.log('default');
+
 }
