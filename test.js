@@ -127,19 +127,63 @@ alert("Hello, World!");
 
 
 //Exercise2
+//
+// const number = +prompt('Введите число между 0 и 3','');
+// switch (number) {
+//     case 0:
+//         console.log('Вы ввели число 0');
+//         break;
+//     case 1:
+//         console.log('Вы ввели число 1');
+//         break;
+//     case 2 || 3:
+//         console.log('Вы ввели число 2, а может и 3');
+//         break;
+//     default:
+//         console.log('default');
+//
+// }
 
-const number = +prompt('Введите число между 0 и 3','');
-switch (number) {
-    case 0:
-        console.log('Вы ввели число 0');
-        break;
-    case 1:
-        console.log('Вы ввели число 1');
-        break;
-    case 2 || 3
-        console.log('Вы ввели число 2, а может и 3');
-        break;
-    default:
-        console.log('default');
+//zadacha1
+// let numOne = ((1.005 * 100) / 100);
+// console.log(Math.round(numOne));
 
-}
+
+//zadacha2
+// let value = '135.58px';
+// console.log(parseFloat(value));
+
+//zadacha4
+// const a = 10;
+// const b = 58;
+// const c = 39;
+// const d = -150;
+// const e = 0;
+// console.log((Math.max(a, b, c, d, e)));
+
+// //zadacha5
+// let min = 58.858;
+// console.log(Math.floor(min));
+
+// //zadacha 6
+// let fls = 'фрилансер';
+// let text = 'Привет! Я ' + fls;
+// console.log((text));
+
+// let a = '456';
+// let b = 123;
+// let text = (a + b);
+// parseInt(a);
+// console.log(text);
+
+// let text = 'фрилансер';
+// console.log((text.toUpperCase()));
+
+// let text = 'фрилансер';
+// console.log(text.slice(3,6));
+
+//
+// let text = 'фрилансер';
+// console.log(text.includes('лан', 4));
+
+
