@@ -57,7 +57,7 @@
 // arr.forEach(function (number) {
 //     newArr.push(number * number);
 // });
-// console.log(newArr);
+// console.log(newArr);     
 // let sum = 0;
 // function sum(newArr) {
 //     let i, sum = 1;
