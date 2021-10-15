@@ -154,13 +154,13 @@
 // // let value = '135.58px';
 // // console.log(parseFloat(value));
 //
-// //zadacha4
-// // const a = 10;
-// // const b = 58;
-// // const c = 39;
-// // const d = -150;
-// // const e = 0;
-// // console.log((Math.max(a, b, c, d, e)));
+// zadacha4
+// const a = 10;
+// const b = 58;
+// const c = 39;
+// const d = -150;
+// const e = 0;
+// console.log((Math.max(a, b, c, d, e)));
 //
 // // //zadacha5
 // // let min = 58.858;
