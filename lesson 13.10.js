@@ -1,64 +1,114 @@
-// const heading = document.querySelectorAll('.fff');
-// console.log(heading);
+const NAME_INPUT = document.getElementById("firstname");
+const SURNAME_INPUT = document.getElementById("lastname");
+const EMAIL_INPUT = document.getElementById("email");
+const LOGIN_INPUT = document.getElementById("loginaccount");
+const PASSWORD_INPUT = document.getElementById("passwordaccount");
+const CREATE_BUTTON = document.getElementById("buttoncreateaccount");
+const ACCOUNTS_CONTAINER = document.getElementById("Accounts");
+const FORM = document.getElementById("form");
 
-// const idList = document.querySelector('#list_1');
-// console.log(idList);
- const heading_1 = document.querySelector('.heading_1');
-const heading_2 = document.querySelector('.heading_2');
-const heading_3 = document.querySelector('.heading_3')
+let ACCOUNT = [];
 
-setTimeout ( () =>{
- addStyleSTo(heading_1, 'Javascript','red', 'black', '3rem')
-}, 1500);
+FORM.addEventListener('submit', function createaccount(event) {
+    event.preventDefault();
 
-setTimeout ( () =>{
- addStyleSTo(heading_2, 'Практика','white', 'blue', '3rem')
-}, 3000);
+    const Create = new createAccount(NAME_INPUT.value, SURNAME_INPUT.value, EMAIL_INPUT.value, LOGIN_INPUT.value, PASSWORD_INPUT.value);
+    const validator = new Validator(NAME_INPUT.value, SURNAME_INPUT.value, EMAIL_INPUT.value, LOGIN_INPUT.value, PASSWORD_INPUT.value);
 
-setTimeout ( () => {
- addStyleSTo(heading_3.querySelector('a'),'blue', 'red', '3rem')
-}, 4500);
+    if (validator.checkAllFields()) {
+        console.log('Всё хорошо')
+    } else {
+        console.log('Ошибка!')
+    }
 
-function addStyleSTo (node,text, color,backgroundColor, fontSize ) {
- node.textContent = text
- node.style.color = color
- node.style.backgroundColor = backgroundColor
- node.style.textAlign = 'center'
- node.style.fontSize = fontSize
- node.style.display = 'block'
- node.style.width = '100%'
+    console.log(Create);
+    clearValues();
+    redrawList();
+});
+
+function clearValues() {
+    NAME_INPUT.value = ' ';
+    SURNAME_INPUT.value = ' ';
+    EMAIL_INPUT.value = ' ';
+    LOGIN_INPUT.value = ' ';
+    PASSWORD_INPUT.value = ' ';
 }
 
-heading_1.onclick = () => {
- if (heading_1.style.color === 'red') {
-  heading_1.style.color = 'blue'
-  heading_1.style.backgroundColor = 'yellow'
- }
- else {
-  heading_1.style.color = 'yellow'
-  heading_1.style.backgroundColor = 'green'
- }
+function redrawList() {
+    let itemsMarkup = ' ';
+    ACCOUNT.forEach((item) => {
+        itemsMarkup += item.getMarkup();
+    })
+    ACCOUNTS_CONTAINER.innerHTML = itemsMarkup;
 }
 
 
-heading_2.ondblclick = () => {
- if (heading_2.style.color === 'white') {
-  heading_2.style.color = 'orange'
-  heading_2.style.backgroundColor = 'grey'
- }
- else {
-  heading_2.style.color = 'yellow'
-  heading_2.style.backgroundColor = 'green'
- }
+function createAccount(name, surname, email, login, password) {
+    this.name = name;
+    this.surname = surname;
+    this.email = email;
+    this.login = login;
+    this.password = password;
+
+    ACCOUNT = [
+        ...ACCOUNT,
+        this,
+    ];
 }
 
-heading_3.addEventListener('mouseup', () => {
- if (heading_2.style.color === 'red') {
-  heading_2.style.color = 'white'
-  heading_2.style.backgroundColor = 'grey'
- }
- else {
-  heading_2.style.color = 'yellow'
-  heading_2.style.backgroundColor = 'black'
- }
-})
+createAccount.prototype.getMarkup = function () {
+    return `
+<div class="accounts-container" >
+    Имя: ${this.name} <br>
+    Фамилия: ${this.surname} <br>
+    EMAIL: ${this.email} <br>
+    Login: ${this.login} <br>
+    Password: ${this.password} <br>
+</div>
+`;
+
+}
+
+class Validator {
+    constructor(name, surname, email, login, password) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.login = login;
+        this.password = password;
+
+    }
+
+    PASSWORD_LENGTH = 8;
+    static domains = ['.com', '.ru', '.ua'];
+
+    checkEmail = (email) => {
+        return this.hasAt(email) && this.correctDomains(email);
+    }
+
+    hasAt(str) {
+        return str.includes('@')
+    }
+
+    correctDomains(str) {
+        return Validator.domains.some((domain) => str.endsWith(domain));
+    }
+
+    checkAllFields = () => {
+        if (this.checkEmail(this.email) && this.checkPassword(this.password)) {
+            return true
+        } else {
+            return false
+        }
+
+    }
+
+    checkPassword = (password) => {
+        if (password.length >= this.PASSWORD_LENGTH) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+}

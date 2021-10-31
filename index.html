@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-<div class="input-container">
-    <span>Beer name: </span>
-    <input id="beerName" type="text">
-</div>
+<form id="form" action="">
+    <div class="input-container">
+        <span>Имя: </span>
+        <input id="firstname" type="text" placeholder="Введите имя" required>
+    </div>
+    <div class="input-container">
+        <span>Фамилия: </span>
+        <input id="lastname" type="text" placeholder="Введите фамилию">
+    </div>
+    <div class="input-container">
+        <span>E-mail: </span>
+        <input id="email" type="text" placeholder="Введите E-mail">
+    </div>
+    <div class="input-container">
+        <span>login: </span>
+        <input id="loginaccount" type="text" placeholder="Введите логин">
+    </div>
+    <div class="input-container">
+        <span>password: </span>
+        <input id="passwordaccount" type="password" placeholder="Введите пароль">
+    </div>
+    <button id="buttoncreateaccount" >Create account</button>
+</form>
 
-<div class="input-container">
-    <span>Beer image src: </span>
-    <input id="beerImage" type="text">
-</div>
+<div id="Accounts" ></div>
 
-<div class="input-container">
-    <span>Beer description: </span>
-    <input id="beerDescription" type="text">
-</div>
-<button id="buttonAdd">Add</button>
 
 <script src="lesson%2013.10.js"></script>
 </body>
