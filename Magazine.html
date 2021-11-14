@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Magazine.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+        html, body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<h1 id="Push-Products">Добавьте продукты</h1>
+<hr color="grey">
+<body bgcolor="#faebd7">
+
+    <div id="cash-container" class="cash"> Выручка:</div>
+
+    <div class="input-container">
+        <span>Название:</span>
+        <input type="text" id="name" placeholder="Введите название:">
+    </div>
+
+    <div class="input-container">
+        <span>Картинка:</span>
+        <input type="text" id="image" placeholder="Вставьте картинку:">
+    </div>
+
+    <div class="input-container">
+        <span>Краткое описание:</span>
+        <input type="text" id="description" placeholder="Введите описание:">
+    </div>
+
+    <div class="input-container">
+        <span>Цена:</span>
+        <input type="text" id="price" placeholder="Введите название:">
+    </div>
+
+    <div class="input-container">
+        <span>Количество:</span>
+        <input type="text" id="number" placeholder="Введите количество:">
+    </div>
+
+    <div>
+        <button class="button" id="add">Добавить продукт</button>
+    </div>
+
+    <div>
+        <button class="buttonnewday" id="newDay">Новый день</button>
+    </div>
+
+
+
+
+<div id="basket"></div>
+<div id="Products"></div>
+
+<script src="Magazine.js"></script>
+</body>
+</html>
